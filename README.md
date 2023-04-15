@@ -3,7 +3,7 @@
 Так же добавлен функционал сортировки книг по году написания, пагинация по страницам и поиск книг по названию.
 ## Цель проекта
 Целью данного проекта было улучшить [проект 1](https://github.com/AleksandrRubsov/Project_Library) используя более высокоуровневые hibernate и Spring Data JPA и сделать выводы,
-для каких целей лучше использовать Jdbc API и JDBS Template и для каких hibernate и Spring Data JPA.
+для каких целей лучше использовать JDBC API и JDBС Template и для каких Hibernate и Spring Data JPA.
 ## Использованные технологии и зависимости
 **:** **Spring MVC**, **Spring Web**, **Spring Data JPA**,**Hibernate**, **Thymeleaf**, **Spring Validator**, **PostgreSQL**
 
