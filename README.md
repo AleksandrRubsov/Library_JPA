@@ -61,7 +61,8 @@
 Варианты резeльтатов запроса:
 
 ![image](https://user-images.githubusercontent.com/70627203/232231160-68e6779f-6878-48a6-a2c6-7b2b2a4ca097.png)
-:
+
+
 ![image](https://user-images.githubusercontent.com/70627203/232231188-cede4f28-b337-43e2-ae8c-4b362b6e8589.png)
 
 ## Проверка просрочки книги
