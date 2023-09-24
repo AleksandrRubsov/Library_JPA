@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ru.ruba.config"},{"l":"ru.ruba.controllers"},{"l":"ru.ruba.models"},{"l":"ru.ruba.repositories"},{"l":"ru.ruba.services"},{"l":"ru.ruba.util"}];updateSearchResults();

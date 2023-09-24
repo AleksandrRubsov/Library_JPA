@@ -7,7 +7,6 @@ import jakarta.servlet.ServletException;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 import java.util.EnumSet;
 
 
@@ -27,6 +26,12 @@ public class MySpringMvcDispatcherSerlvetIntitializer extends AbstractAnnotation
         return new String[]{"/"};
     }
 
+    /**
+     * Вызывается при запуске приложения. Регистрирует фильтры и настраивает контекст сервлета.
+     *
+     * @param aServletContext Контекст сервлета, представляющий собой окружение для приложения.
+     * @throws ServletException Если возникает ошибка при настройке приложения.
+     */
     @Override
     public void onStartup(ServletContext aServletContext) throws ServletException {
         super.onStartup(aServletContext);
@@ -34,11 +39,21 @@ public class MySpringMvcDispatcherSerlvetIntitializer extends AbstractAnnotation
         registerHiddenFieldFilter(aServletContext);
     }
 
+    /**
+     * Регистрирует фильтр скрытых HTTP-методов для приложения.
+     *
+     * @param aContext Контекст сервлета, в котором выполняется регистрация фильтра.
+     */
     private void registerHiddenFieldFilter(ServletContext aContext) {
         aContext.addFilter("hiddenHttpMethodFilter",
                 new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null, true, "/*");
     }
 
+    /**
+     * Регистрирует фильтр кодировки символов для приложения.
+     *
+     * @param aContext Контекст сервлета, в котором выполняется регистрация фильтра.
+     */
     private void registerCharacterEncodingFilter(ServletContext aContext) {
         EnumSet<DispatcherType> dispatcherTypes = EnumSet.of(DispatcherType.REQUEST, DispatcherType.FORWARD);
 

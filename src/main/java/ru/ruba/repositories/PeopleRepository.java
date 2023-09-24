@@ -8,5 +8,11 @@ import java.util.Optional;
 
 @Repository
 public interface PeopleRepository extends JpaRepository<Person, Integer> {
+    /**
+     * Находит человека в репозитории по указанному ФИО (Фамилия, Имя, Отчество).
+     *
+     * @param fio ФИО (Фамилия, Имя, Отчество) человека, которого нужно найти.
+     * @return Optional, содержащий найденного человека, если человек с указанным ФИО существует, иначе пустой Optional.
+     */
     Optional<Person> findByFio(String fio);
 }

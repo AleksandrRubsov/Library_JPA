@@ -12,7 +12,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>19</maven.compiler.source>
     <maven.compiler.target>19</maven.compiler.target>
-    <spring.version>6.0.7</spring.version>
+    <spring.version>6.0.12</spring.version>
     <property name="javax.persistence.sharedCache.mode" value="NONE"/>
   </properties>
 
@@ -68,12 +68,17 @@
       <scope>provided</scope>
     </dependency>
 
-
-
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.2.9</version>
+      <version>1.4.11</version>
+    </dependency>
+
+    <!-- Зависимость для SLF4J (Simple Logging Facade for Java) -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.9</version> <!-- Укажите актуальную версию -->
     </dependency>
 
 

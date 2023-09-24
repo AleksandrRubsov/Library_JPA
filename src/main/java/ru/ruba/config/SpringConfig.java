@@ -81,12 +81,6 @@ public class SpringConfig implements WebMvcConfigurer {
         return dataSource;
     }
 
-    // Используем Hibernate вместо JdbcTemplate
-//    @Bean
-//    public JdbcTemplate jdbcTemplate() {
-//        return new JdbcTemplate(dataSource());
-//    }
-
     private Properties hibernateProperties() {
         Properties properties = new Properties();
         properties.put("hibernate.dialect", env.getRequiredProperty("hibernate.dialect"));
@@ -95,16 +89,11 @@ public class SpringConfig implements WebMvcConfigurer {
         return properties;
     }
 
-//    @Bean
-//    public LocalSessionFactoryBean sessionFactory() {
-//        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-//        sessionFactory.setDataSource(dataSource());
-//        sessionFactory.setPackagesToScan("ru.ruba.config.models");
-//        sessionFactory.setHibernateProperties(hibernateProperties());
-//
-//        return sessionFactory;
-//    }
-
+    /**
+     * Создает и настраивает фабрику менеджера сущностей для работы с базой данных.
+     *
+     * @return Фабрика менеджера сущностей, настроенная для использования указанного источника данных и сканирования пакета "ru.ruba.models".
+     */
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();

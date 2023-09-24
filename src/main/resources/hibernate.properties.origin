@@ -1,7 +1,9 @@
+# Конфигурация источника данных (Data Source)
 hibernate.driver_class=
 hibernate.connection.url=
 hibernate.connection.username=
 hibernate.connection.password=
 
+# Конфигурация Hibernate
 hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 hibernate.show_sql=true
